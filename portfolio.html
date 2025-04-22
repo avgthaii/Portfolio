@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saish Savadatti</title>
+  
+  <!-- Bootstrap & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px; /* Avoid sections hiding under navbar */
+    }
+    body {
+      background-color: #d0f0c0; /* tea green */
+      color: #222;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #155724;
+    }
+    .nav-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #155724;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #0b3f23;
+    }
+
+    /* Hero */
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+    .intro-text {
+      max-width: 80%;
+    }
+    .intro-text h1 {
+      font-size: 3.5rem;
+      color: #155724;
+    }
+    .intro-text p {
+      font-size: 1.5rem;
+    }
+
+    /* Sections */
+    .section {
+      padding: 4rem 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    .section:nth-of-type(2) { animation-delay: 0.3s; }
+    .section:nth-of-type(3) { animation-delay: 0.6s; }
+    .section:nth-of-type(4) { animation-delay: 0.9s; }
+    .section:nth-of-type(5) { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #155724;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #c3e6cb;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon-box {
+      background-color: #ffffff;
+      border: 1px solid #c3e6cb;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem;
+      display: inline-block;
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .icon-box:hover {
+      transform: scale(1.05);
+    }
+    .icon-box i {
+      font-size: 1.8rem;
+      color: #155724;
+      margin-bottom: 0.5rem;
+    }
+    .icon-box p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    a.icon-box {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #e6f4df;
+      text-align: center;
+      padding: 1rem;
+      color: #155724;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar-custom">
+    <div class="navbar-brand">Saish Savadatti</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#connect">Connect</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="intro-text">
+      <h1>Hey, I'm Saish Savadatti</h1>
+      <p>Software Developer</p>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id="about" class="container section">
+    <h2 class="section-title">About Me</h2>
+    <div class="card p-3">
+      <p>
+        Hey there! I'm currently a third-year Computer Science student at Presidency University, Bangalore with a passion for turning ideas into code. I'm skilled in Java and Python, and I enjoy building cool, functional websites using modern web development tools and techniques. I'm always up for a good coding challenge or a chance to collaborate on exciting tech projects.
+      </p>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div id="skills" class="container section">
+    <h2 class="section-title">Skills</h2>
+    <div class="card p-3">
+      <ul class="list-unstyled">
+        <li><i class="bi bi-code-slash me-2"></i>Java</li>
+        <li><i class="bi bi-terminal me-2"></i>Python</li>
+        <li><i class="bi bi-file-earmark-code me-2"></i>HTML, CSS & JavaScript</li>
+        <li><i class="bi bi-bootstrap-fill me-2"></i>Bootstrap</li>
+        <li><i class="bi bi-git me-2"></i>Git & GitHub</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <div id="projects" class="container section">
+    <h2 class="section-title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>DevDash</h5>
+          <p>A sleek developer dashboard built with dynamic APIs and modular design.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3">
+          <h5>F1 Pulse</h5>
+          <p>Live F1 stats and season updates, in a clean and responsive interface.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connect -->
+  <div id="connect" class="container text-center section">
+    <h2 class="section-title">Connect With Me</h2>
+    <div class="d-flex justify-content-center flex-wrap">
+      <div class="icon-box">
+        <i class="bi bi-envelope"></i>
+        <p>saishs10@icloud.com</p>
+      </div>
+      <a href="https://github.com/avgthaii" target="_blank" class="icon-box">
+        <i class="bi bi-github"></i>
+        <p>Check my repositories</p>
+      </a>
+      <a href="https://linkedin.com/in/saish-savadatti-b20289257" target="_blank" class="icon-box">
+        <i class="bi bi-linkedin"></i>
+        <p>Connect on LinkedIn</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Saish Savadatti. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
